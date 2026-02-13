@@ -1,0 +1,346 @@
+:root {
+	--main-bg: #000000;
+	--secondary-bg: #151515;
+	--primary-text: #ffffff;
+	--secondary-text: #fafafa;
+	--accent-color: #d23166;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family:
+		system-ui,
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen,
+		Ubuntu,
+		Cantarell,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	color: var(--primary-text);
+	background-color: var(--main-bg);
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	font-family: 'Hind Madurai', sans-serif;
+	font-size: 16px;
+	line-height: 1;
+	text-transform: capitalize;
+	color: var(--secondary-text);
+	background-color: var(--accent-color);
+	cursor: pointer;
+	border: none;
+	border-radius: 5px;
+}
+
+.title-text {
+	font-family: 'Alexandria';
+	font-weight: 400;
+	font-size: 57.33px;
+	line-height: 0.94;
+	letter-spacing: -4px;
+	opacity: 90%;
+}
+
+.title-text span {
+	color: var(--accent-color);
+}
+
+.main-text {
+	font-size: 18px;
+	line-height: 1.5;
+}
+
+.section {
+	padding-block: 60px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1440px;
+	margin-inline: auto;
+	padding-inline: 96px;
+}
+
+.header {
+	height: 132px;
+}
+
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin-top: 40px;
+}
+
+.header__social-list {
+    display: flex;
+	justify-content: space-between;
+	gap: 16px;
+}
+
+.navigation__list,
+.header__social-list {
+	list-style: none;
+}
+
+.navigation__list {
+	max-width: 507px;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex: 1 0 auto;
+	gap: 16px;
+}
+
+.hero__subtitle {
+	margin-bottom: 20px;
+}
+
+.hero__title {
+	margin-bottom: 16px;
+}
+
+.hero__description {
+	margin-bottom: 48px;
+}
+
+.hero__btn {
+	font-weight: 700;
+	padding: 13.5px 50px;
+}
+
+.hero__image-wrapper {
+	width: 588px;
+	aspect-ratio: 1/1;
+    position: absolute;
+    top: 75px;
+	left: 900px;
+}
+
+.hero__overview {
+    max-width: 587px;
+}
+
+.about-container {
+	position: relative;
+}
+
+.about__description {
+	text-align: center;
+}
+
+.about__description.title-text span {
+	color: var(--primary-text);
+	opacity: 20%;
+}
+
+.about__image {
+	position: absolute;
+	aspect-ratio: 1/1; /* робить сторони одинаковими як в квадраті (ширина елементу = висоті елементу) */
+}
+
+.about__image-pistachio {
+	top: -70px;
+	left: 991px;
+	width: 137px;
+}
+.about__image-milk {
+	width: 144px;
+    left: 150px;
+    top: 87px;
+}
+
+.about__image-strawberry {
+	width: 90px;
+    left: 624px;
+    top: 220px
+}
+
+.about-section {
+    margin-top: 150px;
+}
+
+.products__title-wrapper {
+	margin-bottom: 56px;
+}
+
+.products__navigation-btn {
+	border-radius: 50%;
+	padding: 12px;
+	background-color: rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+}
+
+.products__navigation-btn svg {
+	display: block;
+}
+
+.products__list {
+    display: flex;
+}
+
+
+.product {
+	max-width: 297px;
+}
+
+.product__image {
+	width: 297px;
+	height: 274px;
+	/* object-fit: cover; --- картинка підлаштовується під розміри блоку, залишаючи всі пропорції */
+	/* object-position: center; --- позиціонує центр картинки в центрі блоку */
+	border-radius: 20px;
+}
+
+.product__wrapper {
+	padding: 24px 30px;
+	background-color: var(--secondary-bg);
+	border-radius: 20px;
+}
+
+.product__name {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1;
+	margin-bottom: 18px;
+}
+
+.product__description {
+	opacity: 70%;
+	margin-bottom: 28px;
+}
+
+.product__price {
+	font-family: 'Hind Madurai', sans-serif;
+	font-weight: 500;
+	font-size: 26px;
+	line-height: 1;
+	margin-bottom: 16px;
+}
+
+.product__price sub {
+	font-size: 20px;
+	text-decoration: line-through;
+	opacity: 70%;
+}
+
+.product__buy-btn {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1;
+	padding: 15px 0;
+	width: 100%;
+}
+
+.products__item:not(:last-child) {
+ list-style: none;
+ margin-right: 20px;
+}
+
+.pink_ice_cream {
+  list-style: none;  
+}
+
+.app__title {
+	margin-bottom: 16px;
+}
+
+.app__description {
+	font-size: 18px;
+	line-height: 1.5;
+	opacity: 60%;
+	margin-bottom: 64px;
+}
+
+.app__overview {
+    max-width: 466px;
+}
+
+.app__download-list {
+   list-style: none; 
+}
+
+.steps {
+	margin-bottom: 48px;
+}
+
+.steps__item:not(:last-child) {
+	margin-bottom: 26px;
+}
+
+.steps__item-text {
+	font-size: 18px;
+	line-height: 1.5;
+	opacity: 60%;
+}
+
+.steps__item-text span {
+	display: inline-block;
+	border: 1px solid rgba(255, 255, 255, 0.6);
+	border-radius: 50%;
+	width: 48px;
+	aspect-ratio: 1/1;
+}
+
+.app__image-wrapper {
+	width: 782px;
+	height: 810px;
+    aspect-ratio: 1/1;
+   position: absolute;
+   left: 750px;
+   top: 1950px
+}
+
+.question-section {
+	height: 100svh;
+
+}
+
+.question__inner-wrapper {
+    margin-top: 200px;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.question__title {
+	text-align: center;
+	margin-bottom: 56px;
+}
+
+.container__form {
+    justify-content: center;
+    display: flex;
+    align-content: center;
+}
+
+.footer {
+	background-color: var(--secondary-bg);
+}
