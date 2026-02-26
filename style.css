@@ -37,7 +37,7 @@ body {
 }
 
 img {
-	display: block;
+	display: flex;
 	max-width: 100%;
 }
 
@@ -100,8 +100,8 @@ button {
 
 .header__social-list {
     display: flex;
-	justify-content: space-between;
-	gap: 16px;
+	justify-content: space-around;
+	gap: 15px;
 }
 
 .header__navigation__list {
@@ -130,8 +130,17 @@ button {
 	gap: 16px;
 }
 
+.hero-container {
+	display: flex;
+	justify-content: space-between;
+}
+
 .hero__subtitle {
 	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 1.4px;
 }
 
 .hero__title {
@@ -140,16 +149,19 @@ button {
 
 .hero__description {
 	margin-bottom: 48px;
+	opacity: 60%;
+	font-weight: 400;
 }
 
 .hero__btn {
 	font-weight: 700;
 	padding: 13.5px 50px;
+	max-width: 165px;
+	width: 100%;
 }
 
 .hero__image-wrapper {
-	height: 588px;
-	width: 588px;
+	max-width: 588px;
 }
 
 .hero__overview {
@@ -158,6 +170,8 @@ button {
 
 .about-container {
 	position: relative;
+	padding-top: 69px;
+	padding-bottom: 45px;
 }
 
 .about__description {
@@ -175,20 +189,17 @@ button {
 }
 
 .about__image-pistachio {
-	top: -70px;
-	left: 991px;
-	width: 137px;
+	top: 0;
+	right: 216px;
 }
 .about__image-milk {
-	width: 144px;
-    left: 150px;
-    top: 87px;
+    top: 170px;
+    left: 129px;
 }
 
 .about__image-strawberry {
-	width: 90px;
     left: 624px;
-    top: 220px
+    top: 309px
 }
 
 .about-section {
@@ -202,8 +213,10 @@ button {
 .products__navigation-btn {
 	border-radius: 50%;
 	padding: 12px;
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: #ffffff10;
     margin-top: 30px;
+	margin-right: 9px;
+	margin-left: 9px;
 }
 
 .products__navigation-btn svg {
@@ -211,12 +224,17 @@ button {
 }
 
 .products__list {
+	overflow: auto;
     display: flex;
+	gap: 20px;
+
 }
 
 
 .product {
-	max-width: 297px;
+	display: flex;
+	flex-direction: column;
+	flex-basis: 297px;
 }
 
 .product__image {
@@ -228,9 +246,12 @@ button {
 }
 
 .product__wrapper {
+	display: flex;
+	flex-direction: column;
 	padding: 24px 30px;
 	background-color: var(--secondary-bg);
 	border-radius: 20px;
+	flex-grow: 1;
 }
 
 .product__name {
@@ -244,6 +265,8 @@ button {
 .product__description {
 	opacity: 70%;
 	margin-bottom: 28px;
+	flex-grow: 1;
+	opacity: 70%;
 }
 
 .product__price {
@@ -268,16 +291,28 @@ button {
 	width: 100%;
 }
 
-.products__item:not(:last-child) {
- list-style: none;
- margin-right: 20px;
+.products__item {
+ display: flex;
+ flex-shrink: 0;
+ flex-basis: 297px;
+ flex-direction: column;
 }
 
-.pink_ice_cream {
-  list-style: none;  
+.products__title-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.app-container {
+   display: flex;
+   justify-content: space-between;
 }
 
 .app__title {
+	font-family: "Roboto", sans-serif;
+	font-size: 56px;
+	font-weight: 500;
 	margin-bottom: 16px;
 }
 
@@ -290,54 +325,91 @@ button {
 
 .app__overview {
     max-width: 466px;
+	width: 100%;
 }
 
 .app__download-list {
    list-style: none; 
 }
 
+.app__steps {
+	margin-bottom: 48px;
+	list-style: none;
+}
+
 .steps {
 	margin-bottom: 48px;
+}
+
+.steps__item {
+	position: relative;
 }
 
 .steps__item:not(:last-child) {
 	margin-bottom: 26px;
 }
 
+.steps__item:not(:last-child)::after {
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 22px;
+	left: 23px;
+	bottom: -50%;
+	transform: translateX(-50%);
+	background-color: #ffffff60;
+}
+
 .steps__item-text {
 	font-size: 18px;
 	line-height: 1.5;
 	opacity: 60%;
+	display: flex;
+	align-items: center;
+	gap: 16px;
 }
 
 .steps__item-text span {
-	display: inline-block;
-	border: 1px solid rgba(255, 255, 255, 0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 48px;
+	width: 48px;
+	border: 1px solid #ffffff60;
 	border-radius: 50%;
 	width: 48px;
 	aspect-ratio: 1/1;
 }
 
 .app__image-wrapper {
+	flex: 1 0 782px;
 	width: 782px;
 	height: 810px;
 }
 
 .question-section {
-	height: 100svh;
-
+	height: 684px;
 }
 
 .question__inner-wrapper {
-    margin-top: 200px;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+	max-width: 653px;
+	margin: 0 auto;
 }
 
 .question__title {
 	text-align: center;
 	margin-bottom: 56px;
+}
+
+.question-container {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url(./);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .container__form {
@@ -346,24 +418,58 @@ button {
     align-content: center;
 }
 
+.question__form {
+	display: flex;
+	width: 100%;
+	border: 1px solid white;
+	border-radius: 9999px;
+}
+
+.form-input {
+	background-color: transparent;
+	border: none;
+	padding: 23.5px 30px;
+	width: 100%;
+	font-size: 20px;
+	color: var(--primary-text);
+}
+
+.form-input::placeholder {
+	font-size: 20px;
+}
+
+.form-input:focus {
+	outline: none;
+}
+
 .form-submit {
-	padding: 5px 10px;
+	border-radius: 9999px;
+	padding-inline: 44px;
+	font-size: 20px;
+	font-weight: 500;
+	font-family: "Roboto", sans-serif;
 }
 
 .footer-container {
 	display: flex;
-	margin-top: 20px;
-	justify-content: space-around;
+    gap: 176px;
 }
 
 .social-list__item {
 	list-style: none;
-	margin-right: 10px;
 }
 
 .footer__panel {
-	margin-bottom: 10px;
-	
+   flex-grow: 1;
+   font-size: 18px;
+}
+
+.footer__panel:not(:first-child) {
+	text-wrap: nowrap;
+}
+
+.footer__panel:not(:first-child) a{
+	display: block;
 }
 
 .footer__social-list {
@@ -371,24 +477,35 @@ button {
 }
 
 .footer-logo {
-	margin-top: 10px;
-	margin-bottom: 10px;
+    max-width: 176px;
+	width: 100%;
+	margin-bottom: 24px;
+}
+
+.footer-logo img {
+	width: 100%;
 }
 
 .footer__text {
-	max-width: 212px;
 	font-size: 14px;
-    color: var(--secondary-text);
+	margin-bottom: 24px;
 	opacity: 60%;
-	margin-bottom: 20px;
+}
+
+.social-list__item__footer {
+	margin-right: 10px;
+	list-style: none;
+}
+
+address {
+	font-style: normal;
 }
 
 .panel__title {
-	justify-content: center;
-	text-align: left;
+	font-size: 20px;
+	font-weight: 600;
 	text-transform: uppercase;
-	margin-top: 10px;
-	margin-bottom: 10px;
+	margin-bottom: 33px;
 }
 
 .navigation__list {
@@ -426,4 +543,5 @@ button {
 
 .footer {
 	background-color: var(--secondary-bg);
+	padding-block: 100px;
 }
